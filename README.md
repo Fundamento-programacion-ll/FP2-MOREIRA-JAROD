@@ -12,3 +12,16 @@ _hola mundo_
 __hola mundo__
 ~~hola mundo~~
 *__hola mundo__*
+
+## lista
+
+* primero
++ 
+
+##  lista nuemro
+
+1. letra
+
+## link
+
+jarod [click aqui](https://es.wikipedia.org/wiki/Markdown)
