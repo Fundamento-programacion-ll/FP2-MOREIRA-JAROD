@@ -13,8 +13,8 @@ public class persona {
     String nombre;
     String apellido;
     String dirreccion;
-    int cedula;
-    int telefono;
+    String cedula;
+    String telefono;
     int edad;
     char genero;
     boolean estado_civil;
@@ -43,19 +43,19 @@ public class persona {
         this.dirreccion = dirreccion;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -83,7 +83,7 @@ public class persona {
         this.estado_civil = estado_civil;
     }
 
-    public persona(String nombre, String apellido, String dirreccion, int cedula, int telefono, int edad, char genero, boolean estado_civil) {
+    public persona(String nombre, String apellido, String dirreccion, String cedula, String telefono, int edad, char genero, boolean estado_civil) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dirreccion = dirreccion;
@@ -94,6 +94,7 @@ public class persona {
         this.estado_civil = estado_civil;
     }
 
+  
     @Override
     public String toString() {
         return 

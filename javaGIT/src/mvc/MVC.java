@@ -19,9 +19,9 @@ public class MVC {
     public static void main(String[] args) {
         // TODO code application logic here
        
-       persona kevin = new persona("kevin", "jimenez", "la 41", 1725339, 20, 943576774,'m', true);
-       persona juan = new persona("juan", "jimenez", "la 42", 1725433, 23, 943576774,'h', true);
-       persona pepe = new persona("pepe", "jimenez", "la 43", 1724339, 22, 943576774,'m', true);
+       
+       
+       persona pepi= new persona("pepi", "ortiz", "la 30", "1725332769", "0988914649", 0,'m', true);
     }
     
 }
