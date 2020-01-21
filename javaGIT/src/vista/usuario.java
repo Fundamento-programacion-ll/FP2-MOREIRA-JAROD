@@ -18,19 +18,38 @@ public class usuario {
     public void menu(){
         
         int opcion = 0;
-        opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "MENU \n"+ "agregar persona \n", this)) ;
+        opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "MENU \n"+ "1.-agregar persona \n"+"2.-lista de personas \n"+"3.-Salir\n", this)) ;
         
+        
+        
+        do {
         switch (opcion){
             case 1 :
-                metodos.agregarPersona("pepi");
+                String nombre= JOptionPane.showInputDialog(null, "ingrese un nombre");
+                metodos.agregarPersona(nombre);
+                System.out.println(metodos.ListarPersona());
                 break;
                 
             case 2:
-                metodos.ListarPersona();
+                
+                System.out.println(metodos.ListarPersona());
             break;
+            
+            case 3:
+            opcion =3;
+            break;
+            
             default:
+                opcion =3;
+                
                 break;
         }
+            
+            
+        }while (opcion !=3); 
+                
+        
+        
     }
     
 }

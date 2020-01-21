@@ -22,6 +22,9 @@ public class User {
     return "persona agregada , "+ nombre;
 }
     public String ListarPersona(){
+        
+        
+        
         String lista="";
         
         
