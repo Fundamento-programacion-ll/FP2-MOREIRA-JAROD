@@ -16,7 +16,7 @@ __hola mundo__
 ## lista
 
 * primero
-+ 
++  segundo
 
 ##  lista nuemro
 
@@ -25,3 +25,7 @@ __hola mundo__
 ## link
 
 jarod [click aqui](https://es.wikipedia.org/wiki/Markdown)
+
+## imagenes
+
+![imagen](https://dam.ngenespanol.com/wp-content/uploads/2019/03/luna-colores-nuevo.png)
