@@ -29,3 +29,38 @@ jarod [click aqui](https://es.wikipedia.org/wiki/Markdown)
 ## imagenes
 
 ![imagen](https://dam.ngenespanol.com/wp-content/uploads/2019/03/luna-colores-nuevo.png)
+
+## codigo
+
+```javascritp
+$ npm i -g
+@nestjs
+```
+
+
+```java
+ver a = 'hola'
+```
+
+# tabla
+|edad |nombre|
+|-----|------|
+|24|nombre|
+|21|nombre|
+
+# lineas
+
+---
+***
+___
+
+# videos
+
+<a herf="https://www.youtube.com/watch?v=Z8zQpYeIzN4" target="_blank">
+<img
+src="http://img.youtube.com/vi/Z8zQpYeIzN4/0.jpg">
+
+<img>
+</a>
+
+
