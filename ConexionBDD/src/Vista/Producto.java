@@ -10,17 +10,13 @@ import modelo.articulo;
 
 /**
  *
- * @author Usuario
+ * @author usuario
  */
 public class Producto extends javax.swing.JFrame {
-articulo nuevoarticulo = new articulo();
+        articulo nuevoarticulo = new articulo();
         controladorArticulo articulocontrolador = new controladorArticulo();
-        
-    /**
-     * Creates new form Producto
-     */
     public Producto() {
-        initComponents();
+        initComponents();   
     }
 
     /**
@@ -32,8 +28,6 @@ articulo nuevoarticulo = new articulo();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btn_agregar = new javax.swing.JButton();
-        btn_limpiar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -42,8 +36,22 @@ articulo nuevoarticulo = new articulo();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtdescripcion = new javax.swing.JTextArea();
         txtdescp = new javax.swing.JLabel();
+        btn_agregar = new javax.swing.JButton();
+        btn_limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("nombre");
+
+        jLabel2.setText("precio");
+
+        jLabel4.setText("Producto");
+
+        txtdescripcion.setColumns(20);
+        txtdescripcion.setRows(5);
+        jScrollPane1.setViewportView(txtdescripcion);
+
+        txtdescp.setText("Descrippcion");
 
         btn_agregar.setText("Agregar");
         btn_agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -58,18 +66,6 @@ articulo nuevoarticulo = new articulo();
                 btn_limpiarActionPerformed(evt);
             }
         });
-
-        jLabel1.setText("nombre");
-
-        jLabel2.setText("precio");
-
-        jLabel4.setText("Producto");
-
-        txtdescripcion.setColumns(20);
-        txtdescripcion.setRows(5);
-        jScrollPane1.setViewportView(txtdescripcion);
-
-        txtdescp.setText("Descrippcion");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,7 +93,7 @@ articulo nuevoarticulo = new articulo();
                     .addComponent(txtdescp)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +118,7 @@ articulo nuevoarticulo = new articulo();
                         .addComponent(txtdescp)))
                 .addGap(11, 11, 11)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_agregar)
                     .addComponent(btn_limpiar))
@@ -133,22 +129,22 @@ articulo nuevoarticulo = new articulo();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarActionPerformed
-
+        
         nuevoarticulo.setNombre(txtnombre.getText());
         nuevoarticulo.setDescr(txtdescripcion.getText());
         float precio =0;
         precio = Float.parseFloat(txtprecio.getText());
         nuevoarticulo.setPrecio(precio);
-
+        
         articulocontrolador.ingresarArticulo(nuevoarticulo);
-
+        
     }//GEN-LAST:event_btn_agregarActionPerformed
 
     private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
         txtdescripcion.setText("");
         txtnombre.setText("");
         txtprecio.setText("");
-
+        
     }//GEN-LAST:event_btn_limpiarActionPerformed
 
     /**

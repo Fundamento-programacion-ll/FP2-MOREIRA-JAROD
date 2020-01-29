@@ -13,13 +13,13 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Usuario
+ * @author usuario
  */
 public class conector {
-
+    
     Connection conexion = null;
     String url = 
-   "jdbc:mysql://localhost:32807/prueba?useSSL=false";
+   "jdbc:mysql://localhost:32769/prueba?useSSL=false";
     String usuario = "admin";
     String password = "12345678";
     
@@ -46,5 +46,6 @@ public class conector {
     
     public  void Desconectars(){
         conexion = null;
-        
+    }
+    
 }

@@ -7,10 +7,10 @@ package modelo;
 
 /**
  *
- * @author Usuario
+ * @author usuario
  */
 public class articulo {
-    String nombre;
+    private String nombre;
     String descr;
     float precio;
 
