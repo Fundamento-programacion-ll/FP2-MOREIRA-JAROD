@@ -5,11 +5,12 @@
  */
 package conexionbdd;
 
-import com.mysql.jdbc.PreparedStatement;
-import conexion.conector;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import conexion.Conexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+
+
 
 /**
  *
@@ -21,9 +22,10 @@ public class ConexionBDD {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        PreparedStatement ps = null;
-        conector stringConexion = new conector();
-        stringConexion.getConxion();
+        //PreparedStatement ps = null;
+        Connection accesoDB = Conexion.getConnection();
+        Conexion stringConexion = new Conexion();
+       // stringConexion.getConnection();
         
     }
     

@@ -5,7 +5,8 @@
  */
 package controlador;
 
-import conexion.conector;
+import conexion.Conexion;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ import modelo.articulo;
  * @author usuario
  */
 public class controladorArticulo {
-    conector conexion = new conector();
+    Conexion conexion = new Conexion();
     PreparedStatement ps = null;
     ResultSet rsconsult = null;
     
@@ -28,7 +29,7 @@ public class controladorArticulo {
         String sqlInsert = 
                 "insert into articulos  (nombre,descripcion,precio) values (?,?,?)";
         try {
-            ps = conexion.getConxion().prepareStatement(sqlInsert);
+            ps = conexion.getConnection().prepareStatement(sqlInsert);
             ps.setString(1, nuevoArticulo.getNombre());
             ps.setString(2, nuevoArticulo.getDescr());
             ps.setFloat(3, nuevoArticulo.getPrecio());
@@ -70,7 +71,7 @@ public class controladorArticulo {
         String sqlconsult = 
                 "Select * from articulos where idArticulo = ?";
         try {
-            ps = conexion.getConxion().prepareStatement(sqlconsult);
+            ps = conexion.getConnection().prepareStatement(sqlconsult);
             ps.setInt(1, consultaarticulo);
             rsconsult = ps.executeQuery();
             
@@ -94,7 +95,7 @@ public class controladorArticulo {
         String sqlconsult = 
                 "Select * from articulos where nombre = ?";
         try {
-            ps = conexion.getConxion().prepareStatement(sqlconsult);
+            ps = conexion.getConnection().prepareStatement(sqlconsult);
             ps.setString(1, consultaarticulo);
             rsconsult = ps.executeQuery();
             

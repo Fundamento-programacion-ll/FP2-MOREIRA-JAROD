@@ -5,7 +5,7 @@
  */
 package conexion;
 
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -17,35 +17,24 @@ import java.util.logging.Logger;
  */
 public class conector {
     
-    Connection conexion = null;
-    String url = 
-   "jdbc:mysql://localhost:3306/prueba";
-    String usuario = "admin";
-    String password = "abc";
-    
+   
+   public static Connection conn;
+     private static final String USER= "userPrueba";
+    private static final String PASSWORD= "clavePrueba";
+    private static final String URL= "jdbc:mysql://localhost:3306/prueba";
+    private static final String CLASS_DRIVER= "com.mysql.cj.jbdc.Driver";
+   
     
     public conector(){
         
-        try {
-            conexion = (Connection) DriverManager.getConnection(url,usuario,password);
-            if (conexion != null) {
-                System.out.println("Se conecto");
-            } else {
-                System.err.println("No Se conecto");
-            }
-        } catch (SQLException ex) {
-            System.err.println("Error conexion");
-            ex.printStackTrace();
-        }
+        try{
+        Class.forName(CLASS_DRIVER).newInstance();
+        conn= (Connection) DriverManager.getConnection(URL, USER, PASSWORD);
+        
+    }catch (Exception ex){
+        System.out.println(conector.class.getName() + "Error al abrir la conexion ");
+        ex.printStackTrace();
     }
-    
-    
-    public  Connection getConxion(){
-        return conexion;
-    }
-    
-    public  void Desconectars(){
-        conexion = null;
-    }
+}    
     
 }
