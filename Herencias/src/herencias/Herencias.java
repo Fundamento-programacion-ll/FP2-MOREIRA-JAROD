@@ -16,6 +16,10 @@ public class Herencias {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        perro perrito =new perro(1, "perro", "masculino", "fifi", 1);
+        System.out.println("Resultado"+ perrito.suma(1, 2));
+        perrito.datos();
     }
     
 }
