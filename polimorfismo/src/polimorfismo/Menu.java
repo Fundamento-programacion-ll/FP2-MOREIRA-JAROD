@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package polimorfismo;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author usuario
