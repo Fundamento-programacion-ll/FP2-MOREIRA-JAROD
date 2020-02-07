@@ -17,9 +17,17 @@ public class comparador implements Comparator{
     public int compare(Object pro1, Object pro2) {
         provincia1 = (provincias)pro1;
         provincia2 = (provincias)pro2;
-        compararNombre = (provincia1.getNombreProvincia()
-                .compareToIgnoreCase(provincia2.getNombreProvincia()));
+        
+        if(provincia1.getNumeroHabitantes()>provincia2.getNumeroHabitantes()){
+            compararNombre= 1;
+        }else{
+            compararNombre= -1;
+        }
         return compararNombre;
+        }
+  
+       // compararNombre = (provincia1.getNombreProvincia()
+         //       .compareToIgnoreCase(provincia2.getNombreProvincia()));
+       // return compararNombre;
     }
     
-}

@@ -57,6 +57,10 @@ public class pais {
     public String toString() {
         return "Lista provincias \n"+listaProvincias;
     }
+
+    void ordenarPorNumero() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
